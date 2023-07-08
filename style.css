@@ -1,0 +1,13 @@
+body{
+    background-image: url(/Assets/photo-1566352207769-3a591cla2c9567.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+}
+.card{
+    background-color: rgb(3, 0, 0);
+    border-radius: 20px;
+    color: rgb(239, 232, 232);
+
+}
