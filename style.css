@@ -5,9 +5,14 @@ body{
     height: 100vh;
 
 }
-.card{
+.card {
     background-color: rgb(3, 0, 0);
     border-radius: 20px;
     color: rgb(239, 232, 232);
 
+}
+div{
+    font-size: larger;
+    color:rgb(239, 232, 232)
+    margin: 2rem;
 }
