@@ -6,7 +6,7 @@ body{
 
 }
 .card {
-    background-color: rgb(3, 0, 0);
+    background: linear-gradient(135deg, #d56109,#5B548A );
     border-radius: 20px;
     color: rgb(239, 232, 232);
 
@@ -14,5 +14,5 @@ body{
 div{
     font-size: larger;
     color:rgb(239, 232, 232)
-    margin: 2rem;
+    
 }
