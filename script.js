@@ -1,6 +1,12 @@
 var lat
 var lon 
 
+var myDate = new Date();
+
+var date = document.getElementById("time")
+date.innerHTML = myDate;
+
+
 document.getElementById("submit").addEventListener("click", subClick)
 function subClick(){
     $("#results").text("hi");
