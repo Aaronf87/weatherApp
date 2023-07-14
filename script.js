@@ -1,11 +1,14 @@
 var lat
 var lon 
 
-var myDate = new Date();
+// set time and date 
+function time(){
 
-var date = document.getElementById("time")
-date.innerHTML = myDate;
-
+  var myDate = new Date();
+  var date = document.getElementById("time")
+  date.innerHTML = myDate;
+}
+setInterval(time, 1000);
 
 document.getElementById("submit").addEventListener("click", subClick)
 function subClick(){
@@ -16,6 +19,8 @@ function subClick(){
       $("#results").text(n);
       console.log(n);
     });
+
+  
 
 
 // You will use localStorage to store any persistent data. For more information on how to work with the OpenWeather
