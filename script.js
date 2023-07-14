@@ -1,9 +1,10 @@
 var lat
 var lon 
+apiKey = `452cbddcfb906f1c82bbd2b57e972548`
+let url = `https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}`
 
 // set time and date 
 function time(){
-
   var myDate = new Date();
   var date = document.getElementById("time")
   date.innerHTML = myDate;
@@ -31,4 +32,4 @@ function subClick(){
 
 `https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={452cbddcfb906f1c82bbd2b57e972548}`
 
-cost = fetch(`https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={452cbddcfb906f1c82bbd2b57e972548}`)
+cost = fetch(`https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={}`)
