@@ -10,10 +10,8 @@ console.log(i);
 // set time and date 
 function time(){
   // sets standard time and date
-  var myDate = new Date()
-  // display without timezone
-  myDate = myDate.toUTCString();
-  // grabbing element and saving to var date
+  var myDate = dayjs().format("MMM D, YYYY, hh:mm:ss");
+
   var date = document.getElementById("time")
   // rendering date to id of time
   date.textContent = myDate;
