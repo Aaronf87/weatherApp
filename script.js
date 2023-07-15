@@ -3,13 +3,25 @@ var lon
 apiKey = "452cbddcfb906f1c82bbd2b57e972548"
 let url = `https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid=apiKey`
 
+var i = new Date().getDay;
+console.log(i);
+
+
 // set time and date 
 function time(){
-  var myDate = new Date();
+  // sets standard time and date
+  var myDate = new Date()
+  // display without timezone
+  myDate = myDate.toUTCString();
+  // grabbing element and saving to var date
   var date = document.getElementById("time")
-  date.innerHTML = myDate;
+  // rendering date to id of time
+  date.textContent = myDate;
 }
 setInterval(time, 1000);
+
+
+
 
 document.getElementById("submit").addEventListener("click", subClick)
 function subClick(){
