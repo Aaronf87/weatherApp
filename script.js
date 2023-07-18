@@ -1,44 +1,39 @@
+
 // set time and date 
 function time(){
-  // sets standard time and date
+  // sets standard time and date------------------------------------
   var myDate = dayjs().format("MMM D, YYYY, hh:mm:ss");
-
   var date = document.getElementById("time")
-  // rendering date to id of time using day js...
+// rendering date to id of time using day js
   date.textContent = myDate;
-}
-setInterval(time, 1000);
-var lat 
-var lon 
-// my API key..
+}setInterval(time, 1000);
+
+
+// my API key---------------------------------------------------------------
+// var lat 
+// var lon 
 var apiKey = "452cbddcfb906f1c82bbd2b57e972548";
-  // getting the url from weather api..
-  var requestUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=1&appid=" + apiKey;
+// getting the url from weather api---------------------------------------
+var cityName = document.getElementById("city").value;
+var requestUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=1&appid=" + apiKey;
+// "api.openweathermap.org/data/2.5/forecast?lat="+ lat+ "&lon="+lon+"&appid=" + apiKey
 
-var i = new Date().getDay;
-console.log(i);
+document.getElementById("submit").addEventListener("click", subClick);
 
-
-
-
-
-
-document.getElementById("submit").addEventListener("click", subClick)
 function subClick(){
-cityName = document.querySelector("#city").value;
-console.log (cityName)
-}
-// Using the weather api and fetchin data...
+  console.log(requestUrl);
+};
+
+// Using the weather api and fetchin data------------------------
     function getWeatherApi(){
     
       fetch(requestUrl)
-      .then(function (response){
+      .then(function(response){
       return response.json();
-      console.log(response)
-
-        
-      }
-      )
+      })
+      .then(function(response){
+      console.log(response);
+      })
       }
 
   
@@ -50,4 +45,3 @@ console.log (cityName)
 // api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={452cbddcfb906f1c82bbd2b57e972548}
 
 
-`https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={452cbddcfb906f1c82bbd2b57e972548}`
