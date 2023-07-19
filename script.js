@@ -1,3 +1,6 @@
+var cityName = document.getElementById("city").value;
+var r = document.getElementById("results");
+r.innerContent = cityName;
 
 // set time and date 
 function time(){
@@ -14,30 +17,28 @@ function time(){
 // var lon 
 var apiKey = "452cbddcfb906f1c82bbd2b57e972548";
 // getting the url from weather api---------------------------------------
-var cityName = document.querySelector("input").value;
-console.log(cityName);
 
-var requestUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=1&appid=" + apiKey;
-// "api.openweathermap.org/data/2.5/forecast?lat="+ lat+ "&lon="+lon+"&appid=" + apiKey
+// var requestUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=1&appid=" + apiKey;
+// // "api.openweathermap.org/data/2.5/forecast?lat="+ lat+ "&lon="+lon+"&appid=" + apiKey
 
-document.getElementById("submit").addEventListener("click", subClick);
+// document.getElementById("submit").addEventListener("click", subClick);
 
-function subClick(cityName){
-  console.log(cityName);
-};
+// function subClick(cityName){
+//   console.log(cityName);
+//   getWeatherApi();
+// };
 
-// Using the weather api and fetchin data------------------------
-    function getWeatherApi(){
+// // Using the weather api and fetchin data------------------------
+//     function getWeatherApi(){
     
-      fetch(requestUrl)
-      .then(function(response){
-      return response.json();
-      })
-      .then(function(response){
-      console.log(response);
-      })
-      }
-
+//       fetch(requestUrl)
+//       .then(function(response){
+//       return response.json();
+//       })
+//       .then(function(response){
+//       console.log(response);
+//       })
+//       }
   
 
 
