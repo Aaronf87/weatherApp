@@ -14,14 +14,16 @@ function time(){
 // var lon 
 var apiKey = "452cbddcfb906f1c82bbd2b57e972548";
 // getting the url from weather api---------------------------------------
-var cityName = document.getElementById("city").value;
+var cityName = document.querySelector("input").value;
+console.log(cityName);
+
 var requestUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=1&appid=" + apiKey;
 // "api.openweathermap.org/data/2.5/forecast?lat="+ lat+ "&lon="+lon+"&appid=" + apiKey
 
 document.getElementById("submit").addEventListener("click", subClick);
 
-function subClick(){
-  console.log(requestUrl);
+function subClick(cityName){
+  console.log(cityName);
 };
 
 // Using the weather api and fetchin data------------------------
