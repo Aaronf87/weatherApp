@@ -1,13 +1,10 @@
-var cityName = document.getElementById("city").value;
-var r = document.getElementById("results");
-r.innerContent = cityName;
 
 // set time and date 
 function time(){
   // sets standard time and date------------------------------------
   var myDate = dayjs().format("MMM D, YYYY, hh:mm:ss");
   var date = document.getElementById("time")
-// rendering date to id of time using day js
+  // rendering date to id of time using day js
   date.textContent = myDate;
 }setInterval(time, 1000);
 
@@ -18,6 +15,9 @@ function time(){
 var apiKey = "452cbddcfb906f1c82bbd2b57e972548";
 // getting the url from weather api---------------------------------------
 
+var cityName = document.getElementById("city").value;
+var r = document.getElementById("results");
+r.innerContent = cityName;
 // var requestUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=1&appid=" + apiKey;
 // // "api.openweathermap.org/data/2.5/forecast?lat="+ lat+ "&lon="+lon+"&appid=" + apiKey
 
