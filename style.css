@@ -3,16 +3,24 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
-
+display: flex;
 }
 .card {
     background: linear-gradient(135deg, #d56109,#5B548A );
     border-radius: 20px;
     color: rgb(239, 232, 232);
+    flex-direction: column;
+    align-items: center;
 
 }
 div{
     font-size: larger;
     color:rgb(239, 232, 232)
     
+}
+#time{
+    font-size: 35px;
+}
+#submit{
+    box-shadow: 5px 3px 7px 2px rgb(36, 17, 17);
 }
